@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,200;8..144,300;8..144,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <title>Hamburger Menu Docs</title>
+  </head>
+  <body>
+    <!-- -------▽-Hamburger Menu Icon-▽------- -->
+    <nav id="navbar">
+      <div id="menu-toggle">
+        <!-- A hidden checkbox is used as click receiver in order to use the
+          'input:checked' selector on it -->
+        <input type="checkbox" />
+        <!-- Spans to display as a hamburger -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- -------△-Hamburger Menu Icon-△------- -->
+        <div id="slide-out-menu">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+            <li>
+              <a class="nav-link" href="#Structure_(HTML)">Structure (HTML)</a>
+            </li>
+            <li><a class="nav-link" href="#Styling_(CSS)">Styling (CSS)</a></li>
+            <li><a class="nav-link" href="#Animations">Animations</a></li>
+            <li>
+              <a class="nav-link" href="#References_and_Acknowledgments"
+                >References and Acknowledgments</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="sidebar">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+        <li>
+          <a class="nav-link" href="#Structure_(HTML)">Structure (HTML)</a>
+        </li>
+        <li><a class="nav-link" href="#Styling_(CSS)">Styling (CSS)</a></li>
+        <li><a class="nav-link" href="#Animations">Animations</a></li>
+        <li>
+          <a class="nav-link" href="#References_and_Acknowledgments"
+            >References and Acknowledgments</a
+          >
+        </li>
+      </ul>
+    </div>
+    <main id="main-doc">
+      <header id="main-page-header">
+        <h1>HTML and CSS Only Hamburger Menu</h1>
+      </header>
+      <p id="main-header-subtext">
+        For web developers looking to implement a hamburger menu without having
+        to utilize JavaScript
+      </p>
+      <section class="main-section" id="Introduction">
+        <header class="section-header">
+          <h2>Introduction</h2>
+        </header>
+        <p>
+          The HTML and CSS only hamburger menu is exactly as it sounds, a simple
+          and effective way to create a responsive menu system for a website
+          without using any JavaScript. Whether it is a lack of JavaScript
+          knowledge, or the desire to utilize as little JS as possible, this
+          documentation will lay out in detail exactly how to do so.
+        </p>
+      </section>
+      <section class="main-section" id="Prerequisites">
+        <header class="section-header">
+          <h2>Prerequisites</h2>
+        </header>
+        <p>
+          In order to get the most out of this documentation, knowledge of the
+          following technologies and software are recommended:
+        </p>
+        <ul>
+          <li>
+            <a
+              rel="noopener"
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              title="MDN web docs: HTML"
+              >HTML: HyperText Markup Language</a
+            >
+          </li>
+          <li>
+            <a
+              rel="noopener"
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+              target="_blank"
+              title="MDN web docs: CSS"
+              >CSS: Cascading Style Sheets</a
+            >
+          </li>
+          <li>
+            A code editor such as
+            <a
+              rel="noopener"
+              href="https://code.visualstudio.com/Docs"
+              target="_blank"
+              title="Visual Studio Code Docs"
+              >VS Code</a
+            >
+            or
+            <a
+              rel="noopener"
+              href="https://www.vim.org/docs.php"
+              target="_blank"
+              title="VIM Docs"
+              >VIM</a
+            >
+          </li>
+          <li>
+            Browser base developer tools in
+            <a
+              rel="noopener"
+              href="https://developer.chrome.com/docs/devtools/"
+              target="_blank"
+              title="Chrome DevTools User Docs"
+              >Chrome</a
+            >,
+            <a
+              rel="noopener"
+              href="https://firefox-source-docs.mozilla.org/devtools-user/index.html"
+              target="_blank"
+              title="Firefox DevTools User Docs"
+              >Firefox</a
+            >
+            or similar
+          </li>
+        </ul>
+        <p>
+          Further information on HTML, CSS, code editors and developer tools can
+          be found in the links above.
+        </p>
+      </section>
+      <section class="main-section" id="Structure_(HTML)">
+        <header class="section-header">
+          <h2>Structure (HTML)</h2>
+        </header>
+        <p>
+          The structure of the menu system is broken up into two parts. The
+          first is a 'nav' element that encapsulates everything needed to
+          create:
+        </p>
+        <ul>
+          <li>The hamburger icon</li>
+          <li>
+            The checkbox input used as a click receiver to toggle the slide-out
+            menu
+          </li>
+          <li>The slide-out menu</li>
+        </ul>
+        <p>
+          The second part of the structure is what creates the sidebar
+          navigation menu thats active when being viewed on screens wider than
+          800 pixels.
+        </p>
+        <p>
+          Wrapping the entirety of the hamburger menu is a nav element with the
+          id of "navbar". This contains the "menu-toggle" div.
+        </p>
+
+        <pre><code>&lt;nav id="navbar"&gt;
+  &lt;div id="menu-toggle"&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p>
+          Nested inside of "menu-toggle" is a checkbox input to toggle the
+          slide-out menu.
+        </p>
+
+        <pre><code>&lt;nav id="navbar"&gt;
+  &lt;div id="menu-toggle"&gt;
+    &lt;input type="checkbox" /&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p>
+          Directly underneath the checkbox toggle are three span element that
+          will be styled to create the infamous hamburger menu icon.
+        </p>
+
+        <pre><code>&lt;nav id="navbar"&gt;
+  &lt;div id="menu-toggle"&gt;
+    &lt;input type="checkbox" /&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p>
+          After the three span elements, a sibling div with an id of
+          "slide-out-menu" is used to create the menu pane that is displayed
+          when the checkbox input is toggled. Inside this div is where you place
+          whatever internal page links you need for your site as list items,
+          wrapped in an unordered list element. In this example, Home, About,
+          Info, and Contact are used for illustration purposes.
+        </p>
+
+        <pre><code>&lt;nav id="navbar"&gt;
+  &lt;div id="menu-toggle"&gt;
+    &lt;input type="checkbox" /&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;div id="slide-out-menu"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Info&quot;&gt;Info&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+        <p>
+          There we have the entirety of the hamburger menu icon, the checkbox
+          toggle, and the slide out menu.
+        </p>
+        <p>
+          Moving on to the second half of the menu system, we have a div with
+          the id of "sidebar". This sits directly below the nav element, as its
+          sibling.
+        </p>
+
+        <pre><code>&lt;div id="sidebar"&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>This is used as a container for the internal page links</p>
+
+        <pre><code>&lt;div id="sidebar"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Info&quot;&gt;Info&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>
+          And with that, we have the complete structure for the HTML and CSS
+          only hamburger menu. Putting it all together, it looks like this:
+        </p>
+
+        <pre><code>&lt;nav id="navbar"&gt;
+  &lt;div id="menu-toggle"&gt;
+    &lt;input type="checkbox" /&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;div id="slide-out-menu"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Info&quot;&gt;Info&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;div id="sidebar"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#About&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Info&quot;&gt;Info&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#Contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>
+          *Disclaimer* the topic of whether to use unordered lists to mark up
+          navigation links on websites has been debated for some time now.
+          Personally, with the information I have right now, I choose to utilize
+          these elements when making my site's navigation. Articles have been
+          written debating the pros and cons of each. CSS-Tricks wrote two
+          different articles on the topic, you can find both of them
+          <a
+            rel="noopener"
+            href="https://css-tricks.com/navigation-in-lists-to-be-or-not-to-be/"
+            target="_blank"
+            title="Navigation in Lists: To Be or Not To Be"
+            >here</a
+          >, and
+          <a
+            rel="noopener"
+            href="https://css-tricks.com/wrapup-of-navigation-in-lists/"
+            target="_blank"
+            title="Wrapup of Navigation in Lists"
+            >here</a
+          >.
+        </p>
+      </section>
+      <section class="main-section" id="Styling_(CSS)">
+        <header class="section-header">
+          <h2>Styling (CSS)</h2>
+        </header>
+        <p>
+          When it comes to styling, each application is going to have different
+          needs and design parameters to follow. This section will serve to show
+          you the basics on how to style the menus just as you see here, with
+          the exception of specific fonts styles, and sizing.
+        </p>
+        <p>
+          The CSS is organized much in the same way the HTML is. The first
+          portion is dedicated to the styling of the checkbox input selector and
+          the three spans making up the icon itself.
+        </p>
+        <p>
+          The next portion is whats used to style the slide-out menu, and
+          containing page links.
+        </p>
+        <p></p>
+        <code>Code block</code>
+        <p>Paragraph</p>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class="main-section" id="Animations">
+        <header class="section-header">
+          <h2>Animations</h2>
+        </header>
+        <p>Paragraph</p>
+        <code>Code block</code>
+        <p>Paragraph</p>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
+      <section class="main-section" id="References_and_Acknowledgments">
+        <header class="section-header">
+          <h2>References and Acknowledgments</h2>
+        </header>
+        <p>Paragraph</p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Your Company</p>
+    </footer>
+  </body>
+</html>
