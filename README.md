@@ -1,4 +1,5 @@
 # FCC Technical Documentation Page
+## \*In progress\*
 
 This is my entry for the FreeCodeCamp technical documentation page project, part 
 of the Responsive Web Design Certification. A live version of this page can be
