@@ -169,8 +169,7 @@
         </header>
         <p>
           The structure of the menu system is broken up into two parts. The
-          first is a 'nav' element that encapsulates everything needed to
-          create:
+          first is a #nav element that encapsulates everything needed to create:
         </p>
         <ul>
           <li>The hamburger icon</li>
@@ -187,7 +186,7 @@
         </p>
         <p>
           Wrapping the entirety of the hamburger menu is a nav element with the
-          id of "navbar". This contains the "menu-toggle" div.
+          id of #navbar. This contains the #menu-toggle element.
         </p>
 
         <pre><code>&lt;nav id="navbar"&gt;
@@ -222,11 +221,11 @@
 
         <p>
           After the three span elements, a sibling div with an id of
-          "slide-out-menu" is used to create the menu pane that is displayed
-          when the checkbox input is toggled. Inside this div is where you place
-          whatever internal page links you need for your site as list items,
-          wrapped in an unordered list element. In this example, Home, About,
-          Info, and Contact are used for illustration purposes.
+          #slide-out-menu is used to create the menu pane that is displayed when
+          the checkbox input is toggled. Inside this div element is where you
+          place whatever internal page links you need for your site as list
+          items, wrapped in an unordered list element. In this example, Home,
+          About, Info, and Contact are used for illustration purposes.
         </p>
 
         <pre><code>&lt;nav id="navbar"&gt;
@@ -248,11 +247,11 @@
 
         <p>
           There we have the entirety of the hamburger menu icon, the checkbox
-          toggle, and the slide out menu.
+          toggle, and the slide-out menu.
         </p>
         <p>
           Moving on to the second half of the menu system, we have a div with
-          the id of "sidebar". This sits directly below the nav element, as its
+          the id of #sidebar. This sits directly below the nav element, as its
           sibling.
         </p>
 
@@ -318,7 +317,7 @@
             rel="noopener"
             href="https://css-tricks.com/wrapup-of-navigation-in-lists/"
             target="_blank"
-            title="Wrapup of Navigation in Lists"
+            title="Wrap-up of Navigation in Lists"
             >here</a
           >.
         </p>
@@ -349,17 +348,18 @@
           That is comprised of;
         </p>
         <ul>
-          <li>The 'menu-toggle' div</li>
+          <li>The #menu-toggle element</li>
           <li>Checkbox input toggle</li>
-          <li>Three empty 'spans'</li>
+          <li>Three empty span elements</li>
         </ul>
         <p>
-          Within the 'menu-toggle' div there is also the 'slide-out-menu' div,
-          but that will be styled separately in the next second section
+          Within the #menu-toggle element, there is also the #slide-out-menu
+          element, but that will be styled separately in the next second
+          section.
         </p>
         <p>
           The first selector is used to set the display and position of the
-          entire 'menu-toggle' div.
+          entire #menu-toggle element.
         </p>
 
         <pre><code>#menu-toggle {
@@ -376,34 +376,44 @@
             <th>Explanation</th>
           </tr>
           <tr>
-            <td>display:inline-block;</td>
+            <td>
+              <pre><code>display:inline-block;</code></pre>
+            </td>
             <td>
               Allows the div to flow with text as an inline element, but allows
               for block-level properties such as width and height.
             </td>
           </tr>
           <tr>
-            <td>position:fixed;</td>
+            <td>
+              <pre><code>position:fixed;</code></pre>
+            </td>
             <td>
               positions the element relative to the browser window and makes it
               stay in the same place even if the user scrolls the page
             </td>
           </tr>
           <tr>
-            <td>top: 36px;</td>
+            <td>
+              <pre><code>top: 36px;</code></pre>
+            </td>
             <td>
               Positions the element 36 pixels from the top of the browser window
             </td>
           </tr>
           <tr>
-            <td>left: 15px;</td>
+            <td>
+              <pre><code>left: 15px;</code></pre>
+            </td>
             <td>
               Positions the element 15 pixels from the left of the browser
               window
             </td>
           </tr>
           <tr>
-            <td>z-index: 1;</td>
+            <td>
+              <pre><code>z-index: 1;</code></pre>
+            </td>
             <td>
               Determines the stacking order of elements. An element with a
               higher z-index will be displayed in front of elements with lower
