@@ -330,33 +330,88 @@
         <p>
           When it comes to styling, each application is going to have different
           needs and design parameters to follow. This section will serve to show
-          you the basics on how to style the menus just as you see here, with
-          the exception of specific fonts styles, and sizing.
+          you the basics on how to style the menus just as you see here.
         </p>
         <p>
           The CSS is organized in the same fashion the HTML is, in three
-          separate sections.
+          separate sections;
         </p>
         <ul>
           <li>
-            The styling of the checkbox input selector and the three spans
-            making up the icon itself.
+            The checkbox input selector and the three spans making up the icon
+            itself
           </li>
-          <li>
-            The next portion is whats used to style the slide-out menu, and
-            containing page links.
-          </li>
-          <li>
-            The final section styles the side bar menu visible on larger screens
-          </li>
+          <li>The slide-out menu, and containing page links</li>
+          <li>The side bar menu visible on larger screens</li>
         </ul>
-        <code>Code block</code>
-        <p>Paragraph</p>
+        <p>
+          At the top, the first thing that is styled is the hamburger menu icon.
+          That is comprised of;
+        </p>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>The 'menu-toggle' div</li>
+          <li>Checkbox input toggle</li>
+          <li>Three empty 'spans'</li>
         </ul>
+        <p>
+          Within the 'menu-toggle' div there is also the 'slide-out-menu' div,
+          but that will be styled separately in the next second section
+        </p>
+        <p>
+          The first selector is used to set the display and position of the
+          entire 'menu-toggle' div.
+        </p>
+
+        <pre><code>#menu-toggle {
+  display: inline-block;
+  position: fixed;
+  top: 36px;
+  left: 15px;
+  z-index: 1;
+}       </code></pre>
+
+        <table>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>display:inline-block;</td>
+            <td>
+              Allows the div to flow with text as an inline element, but allows
+              for block-level properties such as width and height.
+            </td>
+          </tr>
+          <tr>
+            <td>position:fixed;</td>
+            <td>
+              positions the element relative to the browser window and makes it
+              stay in the same place even if the user scrolls the page
+            </td>
+          </tr>
+          <tr>
+            <td>top: 36px;</td>
+            <td>
+              Positions the element 36 pixels from the top of the browser window
+            </td>
+          </tr>
+          <tr>
+            <td>left: 15px;</td>
+            <td>
+              Positions the element 15 pixels from the left of the browser
+              window
+            </td>
+          </tr>
+          <tr>
+            <td>z-index: 1;</td>
+            <td>
+              Determines the stacking order of elements. An element with a
+              higher z-index will be displayed in front of elements with lower
+              value. This makes sure the 'menu-toggle' elements displays on top
+              of everything else on the page
+            </td>
+          </tr>
+        </table>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
