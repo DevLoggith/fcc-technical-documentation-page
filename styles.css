@@ -95,8 +95,6 @@ not to see them */
   top: 36px;
   left: 15px;
   z-index: 1;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 #menu-toggle input {
@@ -303,6 +301,31 @@ pre {
   width: 75dvw;
   margin-right: 16px;
   margin-bottom: 50px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  font-family: var(--main-body-font);
+  font-size: 0.75em;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 footer {
