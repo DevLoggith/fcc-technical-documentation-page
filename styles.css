@@ -334,5 +334,6 @@ footer p {
   }
   #main-doc {
     margin-left: 63px;
+    width: auto;
   }
 }
