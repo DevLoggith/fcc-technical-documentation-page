@@ -418,7 +418,95 @@
               Determines the stacking order of elements. An element with a
               higher z-index will be displayed in front of elements with lower
               value. This makes sure the 'menu-toggle' elements displays on top
-              of everything else on the page
+              of everything else on the page besides the checkbox input
+            </td>
+          </tr>
+        </table>
+        <p>
+          The next selector targets the input element - in this case the
+          checkbox selector - inside the #menu-toggle element
+        </p>
+
+        <pre><code>#menu-toggle input {
+  display: block;
+  width: 40px;
+  height: 31px;
+  position: absolute;
+  top: -7px;
+  left: -9px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}       </code></pre>
+
+        <table>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>display:block;</code></pre>
+            </td>
+            <td>Causes the element to generate a block-level box</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>width: 40px;</code></pre>
+            </td>
+            <td>Sets the with of the 'input' element to 40 pixels</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>height: 31px;</code></pre>
+            </td>
+            <td>Sets the height of the 'input' element to 31 pixels</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>position: absolute;</code></pre>
+            </td>
+            <td>
+              Positions the element relative to its closest positioned ancestor.
+              In this case the #menu-toggle element
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>top: -7px;</code></pre>
+            </td>
+            <td>Moves the element 7 pixels upwards of its original position</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>left: -9px;</code></pre>
+            </td>
+            <td>
+              Moves the element 9 pixels to the left of its original position
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>cursor: pointer;</code></pre>
+            </td>
+            <td>
+              Sets the cursor to a pointer hand icon when the mouse is over the
+              'input' element, indicating that the element is clickable.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>opacity: 0;</code></pre>
+            </td>
+            <td>Makes the element transparent and invisible</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>z-index: 2;</code></pre>
+            </td>
+            <td>
+              Stacks the 'input' element on top of the #menu-toggle element,
+              including the empty spans
             </td>
           </tr>
         </table>
