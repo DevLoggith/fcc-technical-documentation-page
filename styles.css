@@ -306,7 +306,7 @@ pre {
 table {
   border-collapse: collapse;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0;
   margin-bottom: 1.3em;
   font-family: var(--main-body-font);
