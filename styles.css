@@ -81,6 +81,7 @@ not to see them */
 :root {
   --menu-link-hover-color: #20b2aa;
   --menu-bg-color: lightgrey;
+  --span-X-color: #232323;
   --menu-font: "Abel", sans-serif;
   --side-bar-width: 153px;
   --heading-font: "Inter", sans-serif;
@@ -111,7 +112,6 @@ not to see them */
   z-index: 2;
 }
 
-/* Hamburger span styling */
 #menu-toggle span {
   display: block;
   width: 33px;
@@ -137,9 +137,9 @@ not to see them */
 
 /* Transform all the spans of hamburger into an "X" */
 /* Take first span, rotate 45° and move 3px left*/
-#menu-toggle input:checked ~ span {
+#menu-toggle input:checked ~ span:nth-child(2) {
   transform: rotate(45deg) translate(-3px);
-  background: #232323;
+  background: var(--span-X-color);
 }
 
 /* Hide and shrink the middle span */
@@ -152,6 +152,7 @@ not to see them */
 /* Reverse the rotation of the last span and move 3px left */
 #menu-toggle input:checked ~ span:nth-child(4) {
   transform: rotate(-45deg) translate(-3px);
+  background: var(--span-X-color);
 }
 
 /* ---------△-Hamburger Menu Icon-△--------- */
