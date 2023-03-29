@@ -146,7 +146,7 @@ not to see them */
 /* nth-child(3) == middle (2nd) span */
 #menu-toggle input:checked ~ span:nth-child(3) {
   opacity: 0;
-  transform: rotate(0deg) scale(0, 0);
+  transform: scale(0, 0);
 }
 
 /* Reverse the rotation of the last span and move 3px left */

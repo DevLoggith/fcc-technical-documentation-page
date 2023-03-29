@@ -372,6 +372,9 @@
 
         <table>
           <tr>
+            <th colspan="2">#menu-toggle</th>
+          </tr>
+          <tr>
             <th>Property & Value</th>
             <th>Explanation</th>
           </tr>
@@ -440,6 +443,9 @@
 }       </code></pre>
 
         <table>
+          <tr>
+            <th colspan="2">#menu-toggle input</th>
+          </tr>
           <tr>
             <th>Property & Value</th>
             <th>Explanation</th>
@@ -532,6 +538,9 @@
   }     </code></pre>
 
         <table>
+          <tr>
+            <th colspan="2">#menu-toggle span</th>
+          </tr>
           <tr>
             <th>Property & Value</th>
             <th>Explanation</th>
@@ -632,18 +641,101 @@
         </p>
         <p>
           The other three selectors call upon the transition property that was
-          set in the #menu-toggle span selector earlier.
+          set in the #menu-toggle span selector earlier with timing and
+          durations for the following transform, opacity, and background
+          properties.
         </p>
 
-        <pre><code>/* nth-child(2) == top (1st) span */
-          #menu-toggle span:nth-child(2) {
-            transform-origin: top left;
-          }
-          
-          /* nth-child(4) == last (3rd) span */
-          #menu-toggle span:nth-child(4) {
-            transform-origin: bottom left;
-          }       </code></pre>
+        <pre><code>#menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-3px);
+  background: var(--span-X-color);
+}
+
+#menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+#menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-3px);
+  background: var(--span-X-color);
+}       </code></pre>
+
+        <table>
+          <tr>
+            <th colspan="2">#menu-toggle input:checked ~ span:nth-child(2)</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform: rotate(45deg) translate(-3px);</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>background: var(--span-X-color);</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#menu-toggle input:checked ~ span:nth-child(3)</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>opacity: 0;</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform: scale(0, 0);</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#menu-toggle input:checked ~ span:nth-child(4)</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform: rotate(-45deg) translate(-3px);</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>background: var(--span-X-color);</code></pre>
+            </td>
+            <td>
+              ****
+            </td>
+          </tr>
+        </table>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
