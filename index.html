@@ -613,7 +613,8 @@
             <td>
               Sets up the transition effect for the subsequent 'transform',
               'background', and 'opacity' properties in later individual span
-              CSS selectors, with specific timing functions and durations.
+              CSS selectors, with specific timing functions and durations for
+              each.
             </td>
           </tr>
         </table>
@@ -674,7 +675,10 @@
               <pre><code>transform: rotate(45deg) translate(-3px);</code></pre>
             </td>
             <td>
-              ****
+              Rotates the first (top) span 45 degrees clockwise and moves it 3
+              pixels to the left. This 'translate' is to make sure the top and
+              bottom spans intersect directly in the middle and form a 90 degree
+              angle together
             </td>
           </tr>
           <tr>
@@ -682,7 +686,9 @@
               <pre><code>background: var(--span-X-color);</code></pre>
             </td>
             <td>
-              ****
+              Transitions the color of the span to a deep, dark grey. In this
+              case set to a variable to make changing the color of both the top
+              and bottom span elements easier.
             </td>
           </tr>
         </table>
@@ -698,17 +704,13 @@
             <td>
               <pre><code>opacity: 0;</code></pre>
             </td>
-            <td>
-              ****
-            </td>
+            <td>Makes the middle span element invisible</td>
           </tr>
           <tr>
             <td>
               <pre><code>transform: scale(0, 0);</code></pre>
             </td>
-            <td>
-              ****
-            </td>
+            <td>Shrinks the middle span down to zero</td>
           </tr>
         </table>
         <table>
@@ -724,7 +726,10 @@
               <pre><code>transform: rotate(-45deg) translate(-3px);</code></pre>
             </td>
             <td>
-              ****
+              Rotates the last (bottom) span 45 degrees counter-clockwise and
+              does it 3 pixels to the left. This 'translate' is to make sure the
+              top and bottom spans intersect directly in the middle and form a
+              90 degree angle together
             </td>
           </tr>
           <tr>
@@ -732,7 +737,9 @@
               <pre><code>background: var(--span-X-color);</code></pre>
             </td>
             <td>
-              ****
+              Transitions the color of the span to a deep, dark grey. In this
+              case set to a variable to make changing the color of both the top
+              and bottom span elements easier.
             </td>
           </tr>
         </table>

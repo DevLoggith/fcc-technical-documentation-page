@@ -249,6 +249,10 @@ pre {
   white-space: pre-wrap;
 }
 
+table pre {
+  font-size: 1.15em;
+}
+
 .nav-list,
 .nav-list > li {
   list-style: none;
@@ -311,7 +315,7 @@ table {
   margin: 0;
   margin-bottom: 1.3em;
   font-family: var(--main-body-font);
-  font-size: 0.75em;
+  font-size: .80em;
 }
 
 th,
