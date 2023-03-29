@@ -608,6 +608,42 @@
             </td>
           </tr>
         </table>
+        <p>
+          The next five selectors will be looked at as a group. The first two -
+          #menu-toggle span:nth-child(2) and #menu-toggle span:nth-child(4) -
+          targets the top and bottom span elements, and sets the transform
+          origin for each.
+        </p>
+
+        <pre><code>/* nth-child(2) == top (1st) span */
+#menu-toggle span:nth-child(2) {
+  transform-origin: top left;
+}
+
+/* nth-child(4) == last (3rd) span */
+#menu-toggle span:nth-child(4) {
+  transform-origin: bottom left;
+}       </code></pre>
+
+        <p>
+          Since the 'top' span is technically the second sibling ancestor to the
+          #menu-toggle parent element - the checkbox input element is the first
+          child in this case - it has to be targeted as span:nth-child(2).
+        </p>
+        <p>
+          The other three selectors call upon the transition property that was
+          set in the #menu-toggle span selector earlier.
+        </p>
+
+        <pre><code>/* nth-child(2) == top (1st) span */
+          #menu-toggle span:nth-child(2) {
+            transform-origin: top left;
+          }
+          
+          /* nth-child(4) == last (3rd) span */
+          #menu-toggle span:nth-child(4) {
+            transform-origin: bottom left;
+          }       </code></pre>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
