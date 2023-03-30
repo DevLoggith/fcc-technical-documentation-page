@@ -206,7 +206,7 @@
 &lt;/nav&gt;</code></pre>
 
         <p>
-          Directly underneath the checkbox toggle are three span element that
+          Directly underneath the checkbox toggle are three span elements that
           will be styled to create the infamous hamburger menu icon.
         </p>
 
@@ -355,8 +355,7 @@
         </ul>
         <p>
           Within the #menu-toggle element, there is also the #slide-out-menu
-          element, but that will be styled separately in the next second
-          section.
+          element, but that will be styled separately in the next section.
         </p>
         <p>
           The first selector is used to set the display and position of the
@@ -639,13 +638,14 @@
         <p>
           Since the 'top' span is technically the second sibling ancestor to the
           #menu-toggle parent element - the checkbox input element is the first
-          child in this case - it has to be targeted as span:nth-child(2).
+          child in this case - it has to be targeted as 'span:nth-child(2)'.
         </p>
         <p>
           The other three selectors call upon the transition property that was
           set in the #menu-toggle span selector earlier with timing and
           durations for the following transform, opacity, and background
-          properties.
+          properties. This is only applied when the input element is in the
+          active, or 'checked', state.
         </p>
 
         <pre><code>#menu-toggle input:checked ~ span:nth-child(2) {
