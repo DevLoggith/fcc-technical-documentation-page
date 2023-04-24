@@ -162,8 +162,9 @@ not to see them */
 #slide-out-menu {
   position: fixed;
   width: min-content;
-  margin: -100px 0 0 -50px;
-  padding: 107px 24px 0px 58px;
+  top: 0;
+  left: 0;
+  padding: 30px 24px 0px 58px;
   line-height: 1.25em;
   background: var(--menu-bg-color);
   font-family: var(--menu-font);
