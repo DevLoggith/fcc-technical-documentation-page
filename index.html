@@ -751,8 +751,114 @@
           style the slide-out menu that appears when the hamburger menu icon is
           activated.
         </p>
-        <p></p>
         <h3>Slide-out Menu</h3>
+        <p>
+          The first selector in this section targets the #slide-out-menu element
+          and sets it's positioning, size, text, spacing, color, and animations.
+        </p>
+        <table>
+          <tr>
+            <th colspan="2">#slide-out-menu</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>position: fixed;</code></pre>
+            </td>
+            <td>
+              Sets the element to a fixed position so it remains in the same
+              place in the viewport as the user scrolls.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>width: min-content;</code></pre>
+            </td>
+            <td>
+              Sets the elements width to the smallest possible required to fit
+              it's content.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <pre><code>top: 0;</code></pre>
+            </td>
+            <td>Positions the element at the top edge of the viewport.</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>left: 0;</code></pre>
+            </td>
+            <td>Positions the element at the left edge of the viewport.</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>padding: 107px 24px 0px 58px;</code></pre>
+            </td>
+            <td>
+              Sets the element's padding to 107px (top), 24px (right), 0px
+              (bottom), and 58px (left).
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <pre><code>line-height: 1.25em;</code></pre>
+            </td>
+            <td>Sets the element's line height to 1.25 times its font size.</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>background: var(--menu-bg-color);</code></pre>
+            </td>
+            <td>
+              Sets the background color to light grey, in this case set to a
+              variable to make changing the background of both the slide-out
+              menu and the sidebar easier and more consistent.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <pre><code>font-family: var(--menu-font);</code></pre>
+            </td>
+            <td>
+              Sets the font of the menu link text to "Abel" with a sans-serif
+              fallback font, set to a variable to make changing the font for
+              both the slide-out menu and the sidebar easier and more
+              consistent.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform-origin: top left;</code></pre>
+            </td>
+            <td>
+              Sets the origin point for the element's CSS transformations to the
+              top left corner.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform: translate(-100%, 0);</code></pre>
+            </td>
+            <td>Moves the element to the left by 100% of its width.</td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1);</code></pre>
+            </td>
+            <td>
+              Specifies an effect for the 'transform' property set above, making
+              it transition over 500 milliseconds using a cubic-bezier timing
+              function.
+            </td>
+          </tr>
+        </table>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
