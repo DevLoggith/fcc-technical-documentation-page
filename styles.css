@@ -158,7 +158,6 @@ not to see them */
 /* ---------△-Hamburger Menu Icon-△--------- */
 /* ---------▽-Slide-Out-Menu-▽--------- */
 
-/* Make this absolute positioned at the top left of the screen */
 #slide-out-menu {
   position: fixed;
   width: min-content;

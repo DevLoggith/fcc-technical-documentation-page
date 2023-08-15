@@ -618,6 +618,7 @@
             </td>
           </tr>
         </table>
+
         <p>
           The next five selectors will be looked at as a group. The first two -
           #menu-toggle span:nth-child(2) and #menu-toggle span:nth-child(4) -
@@ -744,6 +745,7 @@
             </td>
           </tr>
         </table>
+
         <p>
           With that last selector complete, we have everything needed to
           position, style, and animate the hamburger menu icon and checkbox
@@ -756,6 +758,7 @@
           The first selector in this section targets the #slide-out-menu element
           and sets it's positioning, size, text, spacing, color, and animations.
         </p>
+
         <pre><code>#slide-out-menu {
   position: fixed;
   width: min-content;
@@ -769,6 +772,7 @@
   transform: translate(-100%, 0);
   transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1);
 }       </code></pre>
+
         <table>
           <tr>
             <th colspan="2">#slide-out-menu</th>
@@ -872,10 +876,116 @@
             </td>
           </tr>
         </table>
+
         <p>
           With the styling of the slide-out menu container itself taken care of,
           the next five selectors target the contents of that container.
         </p>
+        <p>
+          The first three selectors in this group handle the spacing, sizing,
+          color, and styling of the list items and menu links. The
+          '#slide-out-menu .nav-link' selector also sets up a transition value
+          used to fade in the text color when hovering over the links.
+        </p>
+
+        <pre><code>#slide-out-menu li {
+  padding-bottom: 20px;
+}
+
+#slide-out-menu .nav-link {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--menu-item-color);
+  transition: color 300ms ease;
+}
+
+#slide-out-menu a:hover {
+  color: var(--menu-link-hover-color);
+}</code></pre>
+
+        <table>
+          <tr>
+            <th colspan="2">#slide-out-menu li</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>padding-bottom: 20px;</code></pre>
+            </td>
+            <td>
+              Adds 20 pixels of padding to the bottom of every menu list item in
+              the slide-out menu.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#slide-out-menu .nav-link</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>font-size: 1.5em;</code></pre>
+            </td>
+            <td>
+              Sets the font size to 1.5 times the default font size of the
+              element.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>text-decoration: none;</code></pre>
+            </td>
+            <td>
+              Removes the underline from the text decoration of the links.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>color: var(--menu-item-color);</code></pre>
+            </td>
+            <td>
+              Sets the menu link color to a black color, in this case set to a
+              variable to make changing the color of all of the items contained
+              in the menus easier and more consistent.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transition: color 300ms ease;</code></pre>
+            </td>
+            <td>
+              Specifies a smooth transition effect for the color change, lasting
+              300ms and using an ease timing function.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#slide-out-menu a:hover</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>color: var(--menu-link-hover-color);</code></pre>
+            </td>
+            <td>
+              Sets the color for the link hover state to a turquoise color, in
+              this case set to a variable to make changing the color of the link
+              hover states in both the slide out menu and the sidebar menu
+              easier and more consistent.
+            </td>
+          </tr>
+        </table>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
