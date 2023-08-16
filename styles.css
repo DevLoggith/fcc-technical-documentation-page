@@ -205,7 +205,7 @@ nav {
   position: fixed;
   top: 0px;
   padding: 10px;
-  background-color: lightgrey;
+  background-color: var(--menu-bg-color);
   line-height: 1em;
   font-family: var(--menu-font);
   font-size: 1.2em;
@@ -253,7 +253,7 @@ table pre {
   font-size: 1.15em;
 }
 
-td>code {
+td > code {
   font-size: 1.35em;
 }
 

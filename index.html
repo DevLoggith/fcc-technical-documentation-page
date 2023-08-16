@@ -1041,10 +1041,377 @@
 
         <p>
           That completes the CSS styling for the hamburger menu icon and
-          slide-out menu. In the following section of this documentation we will
-          take a look at everything needed to style the sidebar menu when being
-          viewed on wider screens.
+          slide-out menu. In the following section, we will take a look at
+          everything needed to style the sidebar menu visible when being viewed
+          on wider screens.
         </p>
+        <h3>Sidebar</h3>
+        <p>
+          The first selector - in a series of four total, used to style the
+          sidebar menu and contents - targets the #sidebar element itself and
+          sets all the standard parameters for itself and the contents such as
+          size, positioning, spacing, coloring and font.
+        </p>
+
+        <pre><code>#sidebar {
+  height: 100dvh;
+  width: var(--side-bar-width);
+  position: fixed;
+  top: 0px;
+  padding: 10px;
+  background-color: var(--menu-bg-color);;
+  line-height: 1em;
+  font-family: var(--menu-font);
+  font-size: 1.2em;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}</code></pre>
+
+        <table>
+          <tr>
+            <th colspan="2">#sidebar</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>height: 100dvh;</code></pre>
+            </td>
+            <td>
+              Sets the height of the #sidebar element to 100 dynamic viewport
+              height units (dvh). This ensures that the sidebar's height spans
+              the entire vertical height of the viewport whether the user agent
+              interface is currently visible or not.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>width: var(--side-bar-width);</code></pre>
+            </td>
+            <td>
+              Sets the sidebar width to 153 pixels (assigned to a variable)
+              making it easier to adjust both the sidebar width and left side
+              footer padding in one place
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>position: fixed;</code></pre>
+            </td>
+            <td>
+              Fixes the element relative to the viewport, even when the page is
+              scrolled.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>top: 0px;</code></pre>
+            </td>
+            <td>
+              Positions the top edge of the element at 0 pixels from the top of
+              the viewport.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>padding: 10px;</code></pre>
+            </td>
+            <td>
+              Adds 10 pixels of padding to the content inside the element,
+              creating space between the content and the edges of the sidebar.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>background-color: var(--menu-bg-color);</code></pre>
+            </td>
+            <td>
+              Sets the background color to light grey, in this case set to a
+              variable to make changing the background of both the sidebar and
+              the slide-out menu easier and more consistent.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>line-height: 1em;</code></pre>
+            </td>
+            <td>
+              Sets the line height of the text inside the element to the height
+              of a single line of text.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>font-family: var(--menu-font);</code></pre>
+            </td>
+            <td>
+              Sets the font of the menu link text to "Abel" with a sans-serif
+              fallback font, set to a variable to make changing the font for
+              both the sidebar and the slide-out menu easier and more
+              consistent.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>font-size: 1.2em;</code></pre>
+            </td>
+            <td>
+              Sets the font size of the text inside the element to 1.2 times the
+              default font size.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);</code></pre>
+            </td>
+            <td>Adds a box shadow to the right side of the element.</td>
+          </tr>
+        </table>
+
+        <p>
+          With the sidebar element established, the last three CSS selectors
+          focus on styling the contents of the sidebar such as the list items,
+          the navigation links, and the link hover states.
+        </p>
+
+        <pre><code>#sidebar li {
+  padding-bottom: 20px;
+}
+
+#sidebar .nav-link {
+  display: block;
+  text-decoration: none;
+  color: var(--menu-item-color);
+  transition: color 300ms ease;
+}
+
+#sidebar a:hover {
+  color: var(--menu-link-hover-color);
+}</code></pre>
+
+        <table>
+          <tr>
+            <th colspan="2">#sidebar li</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>padding-bottom: 20px;</code></pre>
+            </td>
+            <td>
+              Adds 20 pixels of padding to the bottom of each list item in the
+              sidebar element.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#sidebar .nav-link</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>display: block;</code></pre>
+            </td>
+            <td>
+              Sets the display property of the .nav-link elements to block. This
+              changes the display behavior of the links from inline (default for
+              anchor elements) to block-level, which means each link will take
+              up the full width of its container and start on a new line.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>text-decoration: none;</code></pre>
+            </td>
+            <td>
+              Removes the underline from the text decoration of the .nav-link
+              elements.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>color: var(--menu-item-color);</code></pre>
+            </td>
+            <td>
+              Sets the menu link color to a black color, in this case set to a
+              variable to make changing the color of all of the items contained
+              in the menus easier and more consistent.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transition: color 300ms ease;</code></pre>
+            </td>
+            <td>
+              Specifies a smooth transition effect for the color change, lasting
+              300ms and using an ease timing function.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#sidebar a:hover</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>color: var(--menu-link-hover-color);</code></pre>
+            </td>
+            <td>
+              Sets the color for the link hover state to a turquoise color, in
+              this case set to a variable to make changing the color of the link
+              hover states in both the sidebar menu and the slide-out menu
+              easier and more consistent.
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          With that, we have everything needed to style our hamburger icon, both
+          of our menus, and all of their contents just as you see on the page
+          here. Just like we did in the HTML section, when we put it all
+          together, it looks like this:
+        </p>
+
+        <pre><code>/* ---------▽-Hamburger Menu Icon-▽--------- */
+
+#menu-toggle {
+  display: inline-block;
+  position: fixed;
+  top: 36px;
+  left: 15px;
+  z-index: 1;
+}
+
+#menu-toggle input {
+  display: block;
+  width: 40px;
+  height: 31px;
+  position: absolute;
+  top: -7px;
+  left: -9px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menu-toggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: var(--menu-bg-color);
+  border-radius: 3px;
+  z-index: 1;
+  transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 500ms cubic-bezier(0.77, 0.2, 0.05, 1), opacity 550ms ease;
+}
+
+#menu-toggle span:nth-child(2) {
+  transform-origin: top left;
+}
+
+#menu-toggle span:nth-child(4) {
+  transform-origin: bottom left;
+}
+
+#menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-3px);
+  background: var(--menu-item-color);
+}
+
+#menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+#menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-3px);
+  background: var(--menu-item-color);
+}
+
+/* ---------△-Hamburger Menu Icon-△--------- */
+/* ---------▽-Slide-Out-Menu-▽--------- */
+
+#slide-out-menu {
+  position: fixed;
+  width: min-content;
+  top: 0;
+  left: 0;
+  padding: 30px 24px 0px 58px;
+  line-height: 1.25em;
+  background: var(--menu-bg-color);
+  font-family: var(--menu-font);
+  transform-origin: top left;
+  transform: translate(-100%, 0);
+  transition: transform 500ms cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#slide-out-menu li {
+  padding-bottom: 20px;
+}
+
+#slide-out-menu .nav-link {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--menu-item-color);
+  transition: color 300ms ease;
+}
+
+#slide-out-menu a:hover {
+  color: var(--menu-link-hover-color);
+}
+
+nav {
+  display: none;
+}
+
+#menu-toggle input:checked ~ #slide-out-menu {
+  transform: none;
+}
+
+/* ---------△-Slide-Out-Menu-△--------- */
+/* ---------------▽-Sidebar-▽--------------- */
+
+#sidebar {
+  height: 100dvh;
+  width: var(--side-bar-width);
+  position: fixed;
+  top: 0px;
+  padding: 10px;
+  background-color: var(--menu-bg-color);
+  line-height: 1em;
+  font-family: var(--menu-font);
+  font-size: 1.2em;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar li {
+  padding-bottom: 20px;
+}
+
+#sidebar .nav-link {
+  display: block;
+  text-decoration: none;
+  color: var(--menu-item-color);
+  transition: color 300ms ease;
+}
+
+#sidebar a:hover {
+  color: var(--menu-link-hover-color);
+}</code></pre>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
