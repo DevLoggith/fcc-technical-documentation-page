@@ -191,7 +191,7 @@ nav {
   display: none;
 }
 
-/* And let's slide it in from the left */
+/* Slides menu in from the left */
 #menu-toggle input:checked ~ #slide-out-menu {
   transform: none;
 }
@@ -251,6 +251,10 @@ pre {
 
 table pre {
   font-size: 1.15em;
+}
+
+td>code {
+  font-size: 1.35em;
 }
 
 .nav-list,

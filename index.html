@@ -258,7 +258,7 @@
         <pre><code>&lt;div id="sidebar"&gt;
 &lt;/div&gt;</code></pre>
 
-        <p>This is used as a container for the internal page links</p>
+        <p>This is used as a container for the internal page links.</p>
 
         <pre><code>&lt;div id="sidebar"&gt;
   &lt;ul&gt;
@@ -981,11 +981,70 @@
             <td>
               Sets the color for the link hover state to a turquoise color, in
               this case set to a variable to make changing the color of the link
-              hover states in both the slide out menu and the sidebar menu
+              hover states in both the slide-out menu and the sidebar menu
               easier and more consistent.
             </td>
           </tr>
         </table>
+
+        <p>
+          The last two selectors for the slide-out menu hide the hamburger menu
+          icon when the sidebar menu is visible on wider screens, and slide the
+          menu in from the left when the input is in the checked state.
+        </p>
+
+        <pre><code>nav {
+  display: none;
+  }
+  
+#menu-toggle input:checked ~ #slide-out-menu {
+  transform: none;
+}</code></pre>
+
+        <table>
+          <tr>
+            <th colspan="2">nav</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>display: none;</code></pre>
+            </td>
+            <td>
+              Hides the hamburger menu icon when the sidebar menu is visible on
+              wider screens.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th colspan="2">#menu-toggle input:checked ~ #slide-out-menu</th>
+          </tr>
+          <tr>
+            <th>Property & Value</th>
+            <th>Explanation</th>
+          </tr>
+          <tr>
+            <td>
+              <pre><code>transform: none;</code></pre>
+            </td>
+            <td>
+              Slides the menu in from the left of the screen, reversing the
+              <code>transform: translate(-100%, 0);</code> set up in the
+              #slide-out-menu selector.
+            </td>
+          </tr>
+        </table>
+
+        <p>
+          That completes the CSS styling for the hamburger menu icon and
+          slide-out menu. In the following section of this documentation we will
+          take a look at everything needed to style the sidebar menu when being
+          viewed on wider screens.
+        </p>
       </section>
       <section class="main-section" id="Animations">
         <header class="section-header">
