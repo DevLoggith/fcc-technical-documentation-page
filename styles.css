@@ -177,6 +177,7 @@ not to see them */
 }
 
 #slide-out-menu .nav-link {
+  display: block;
   font-size: 1.5em;
   text-decoration: none;
   color: var(--menu-item-color);
@@ -255,6 +256,14 @@ table pre {
 
 td > code {
   font-size: 1.35em;
+}
+
+a:focus {
+  outline: 2px dashed #20b2aa;
+}
+
+a:active {
+  outline: none;
 }
 
 .nav-list,
