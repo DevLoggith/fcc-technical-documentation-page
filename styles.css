@@ -266,6 +266,10 @@ a:active {
   outline: none;
 }
 
+a:visited {
+  color: #62c9c3;
+}
+
 .nav-list,
 .nav-list > li {
   list-style: none;
@@ -360,6 +364,20 @@ footer {
 
 footer p {
   margin-bottom: 0;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background: #20b2aa;
+  color: #4cc1bb;
+}
+
+footer a:visited {
+  color: #fff;
 }
 
 /* ------------▽-Media Queries-▽----------- */
