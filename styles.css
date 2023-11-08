@@ -235,7 +235,8 @@ body {
 }
 
 #main-page-header,
-.section-header, h3 {
+.section-header,
+h3 {
   font-family: var(--heading-font);
 }
 
