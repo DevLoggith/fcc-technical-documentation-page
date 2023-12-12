@@ -323,6 +323,17 @@ a:visited {
   margin-bottom: 50px;
 }
 
+.disclaimer {
+  font-style: italic;
+  text-align: center;
+  color: #666;
+  margin-top: 10px;
+}
+
+.disclaimer strong {
+  font-weight: bold;
+}
+
 #main-doc h2 {
   font-size: clamp(1rem, 3.5vw, 1.75rem);
 }
