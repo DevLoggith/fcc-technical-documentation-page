@@ -229,3 +229,19 @@ nav {
 }
 
 /* ---------------△-Sidebar-△--------------- */
+
+@media screen and (max-width: 823px) {
+  nav {
+    display: block;
+  }
+  footer {
+    margin-left: 0;
+  }
+  #sidebar {
+    display: none;
+  }
+  #main-doc {
+    margin-left: 63px;
+    width: auto;
+  }
+}
