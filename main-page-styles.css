@@ -165,7 +165,7 @@ a:visited {
 }
 
 #main-header-subtext {
-  font-size: clamp(0.9rem, 3vw, 1.5rem) !important;
+  font-size: clamp(1rem, 3vw, 1.5rem) !important;
   line-height: 1.25em;
 }
 
@@ -193,27 +193,27 @@ a:visited {
 }
 
 #main-doc h2 {
-  font-size: clamp(1rem, 3.5vw, 1.75rem);
+  font-size: clamp(1.2rem, 3.5vw, 1.75rem);
 }
 
 #main-doc h3 {
-  font-size: clamp(0.8rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 #main-doc p {
-  font-size: clamp(0.7rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 #main-doc ul {
-  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 #main-doc table {
-  font-size: clamp(0.6rem, 1.65vw, 0.8rem);
+  font-size: clamp(0.8rem, 1.65vw, 0.8rem);
 }
 
 .main-section > pre {
-  font-size: clamp(0.7rem, 3vw, 0.8rem);
+  font-size: clamp(0.8rem, 3vw, 0.8rem);
 }
 
 table {
