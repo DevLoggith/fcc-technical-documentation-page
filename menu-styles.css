@@ -1,13 +1,3 @@
-:root {
-  --menu-link-hover-color: #20b2aa;
-  --menu-bg-color: lightgrey;
-  --menu-item-color: #232323;
-  --menu-font: "Abel", sans-serif;
-  --side-bar-width: 153px;
-  --heading-font: "Inter", sans-serif;
-  --main-body-font: "Roboto Serif", serif;
-}
-
 /* ---------▽-Hamburger Menu Icon-▽--------- */
 
 #menu-toggle {
